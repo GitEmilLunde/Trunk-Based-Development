@@ -25,13 +25,13 @@ def status():
         "besked": "Alt kører som det skal 👍"
     })
 
-@app.route("/vindmoeller")
-def vindmoeller():
+@app.route("/sensor")
+def sensor():
     return jsonify({
-        "antal": 42,
-        "lokation": "Nordsøen",
-        "status": "online"
-    })    
+        "type": "temperatur",
+        "vaerdi": 21.5,
+        "enhed": "celsius"
+    }) 
 
 if __name__ == "__main__":
     app.run(debug=True)
