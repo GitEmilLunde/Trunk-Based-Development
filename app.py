@@ -32,6 +32,13 @@ def sensor():
         "vaerdi": 21.5,
         "enhed": "celsius"
     }) 
+@app.route("/vindmoeller")
+def vindmoeller():
+    return jsonify({
+        "antal": 42,
+        "lokation": "Nordsøen",
+        "status": "online"
+    })
 
 if __name__ == "__main__":
     app.run(debug=True)
