@@ -18,5 +18,12 @@ def info():
         "version": "1.0"
     })
 
+@app.route("/status")
+def status():
+    return jsonify({
+        "online": True,
+        "besked": "Alt kører som det skal 👍"
+    })
+
 if __name__ == "__main__":
     app.run(debug=True)
