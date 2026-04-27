@@ -25,6 +25,13 @@ def status():
         "besked": "Alt kører som det skal 👍"
     })
 
+@app.route("/sensor")
+def sensor():
+    return jsonify({
+        "type": "temperatur",
+        "vaerdi": 21.5,
+        "enhed": "celsius"
+    }) 
 @app.route("/vindmoeller")
 def vindmoeller():
     return jsonify({
